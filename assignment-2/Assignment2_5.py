@@ -1,19 +1,22 @@
 def checkPrime(no):
     
     if no < 2 :
-        return "invalid no"
+        return False
     
     if no == 2:
-        return "a prime number"
+        return True
     
     for i in range(2,no):
         if no%i==0:
-            return "not a prime number"
+            return False
     
-    return "a prime number"
+    return True
 
 def main():
-    print("The number is : ",checkPrime(int(input("Enter no : "))))
+    if checkPrime(int(input("Enter no : "))):
+        print("The number is : prime")
+    else:
+        print("The number is : not prime")
     return
 
 if __name__ == "__main__":
